@@ -1,0 +1,458 @@
+@font-face{
+    src: url(../fonts/Raleway-Regular.ttf);
+    font-family: 'regular';
+}
+@font-face{
+    src: url(../fonts/Raleway-Medium.ttf);
+    font-family: 'medium';
+}
+@font-face{
+    src: url(../fonts/Raleway-SemiBold.ttf);
+    font-family: 'semi_bold';
+}
+@font-face{
+    src: url(../fonts/Raleway-Bold.ttf);
+    font-family: 'bold';
+}
+:root{
+    --grey: #707070;
+    --grey_d: #415262;
+    --green: #30e190;  
+}
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'medium';
+}
+h1{
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'semi_bold';
+    line-height: 1.18;
+}
+h2{
+    font-size: 18px;
+}
+h3{
+    font-size: 16px;
+}
+p{
+    font-size: 16px;
+    color: var(--grey);
+}
+a{
+    text-decoration: none;
+}
+.regular{
+    font-family: 'regular';
+}
+.medium{
+    font-family: 'medium';
+}
+.semi_bold{
+    font-family: 'semi_bold';
+}
+.bold{
+    font-family: 'bold';
+}
+
+.grey{
+    color: var(--grey);
+}
+.grey_d{
+    color: var(--grey_d);
+}
+.green{
+    color: var(--green);
+}
+
+
+
+
+
+
+
+/* Vende */
+/*Header Menu*/
+.header_menu{
+    position: fixed;
+    background-image: url();
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header_menu::before{
+    position: absolute;
+    content: '';
+    top:0;
+    left: 0;  
+    opacity: 0.66;
+    background-image: linear-gradient(to bottom, #001d38, #273d51 85%, rgba(0, 29, 56, 0.95));
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.header_menu *{
+    position: relative;
+    z-index: 2;
+}
+.header_menu .logo{
+    max-width: 70px;
+}
+.menu_search{
+    margin-bottom: 34px;
+}
+.tab_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: solid 2px var(--green);
+    width: fit-content;
+    margin: auto;
+    max-width: 324px;
+    width: 100%;
+}
+.tab_buttons .button_dep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 25%;
+    background: #fff;
+    cursor: pointer;
+    border:none;
+    border-right: solid 2px var(--green);
+    transition: all .3s;
+}
+.tab_buttons .button_dep:hover{
+    color: var(--grey_d);
+    background: var(--green);
+}
+.tab_buttons .button_dep:nth-last-child(1){
+    border-right: none;
+}
+.tab_buttons .button_dep.active{
+    background: var(--green);
+    font-family: 'bold';
+    color: var(--grey_d);
+}
+.address_search{
+    max-width: 324px;
+    margin:auto;
+    position: relative;
+    margin-top: 20px;
+}
+.address_search > input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 16px;
+}
+.address_search::before{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0px;
+    border-left: solid 12px transparent;
+    border-right: solid 12px transparent;
+    border-bottom: solid 12px #fff;
+    transition: all .3s;
+}
+.address_search.compra::before{
+    left: 10.18%;
+    top: -12px;
+}
+.address_search.vende::before{
+    left: 34%;
+    top: -12px; 
+}
+.address_search.alquila::before{
+    left: 58.64%;
+    top: -12px;       
+}
+.address_search.explora::before{
+    left: 82.71%;
+    top: -12px;            
+}
+.address_search::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 17px;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    margin: auto;
+    background: url(../assets/maps-and-flags.png);
+    background-size: cover;
+    z-index: 5;
+}
+
+
+
+/*Layout*/
+.layout{
+    padding-top: 263.78px;
+}
+.layout .header_layout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+    background: #f2f2f2;
+    border-bottom: solid 2px var(--green);
+}
+.layout .header_layout>h2{
+    font-family: 'semi_bold';
+    color: var(--grey_d);
+}
+a.state_item{
+    display: flex;
+    padding: 25px 16px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--grey);
+    transition: all .3s;
+}
+a.state_item > h3{
+    color: var(--green);
+    font-family: 'bold';
+    width: 62%;
+    max-width: 110px;
+    transition: all .3s;
+}
+a.state_item > p{
+    width: 100%;
+    transition: all .3s;
+}
+a.state_item > img{
+    margin-left: 20px;
+}
+a.state_item:hover{
+    background: var(--green);
+}
+a.state_item:hover > h3{
+    color: var(--grey_d);
+}
+a.state_item:hover > p{
+    color: var(--grey_d);
+}
+
+
+
+/*Footer*/
+footer{
+    background: var(--grey_d);
+    padding: 20px 16px 10px;
+}
+.footer_a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--green);
+    padding-bottom: 10px;
+}
+.footer_a > img{
+    max-width: 70px;
+}
+.menu_footer{
+    display: flex;
+}
+.menu_footer > a{
+    color: #fff;
+    font-size: 12px;
+    font-family: 'regular';
+}
+.menu_footer span.divider{
+    display: block;
+    margin: 0 10px;
+    width: 1px;
+    background: var(--green);
+}
+.footer_b > p{
+    margin: 10px 0 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+
+
+/* Vende parte 2 */
+
+header.control{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 0 2.5px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #fff;
+    width: 100%;
+}
+.forms_content{
+    padding: 90px 40px 40px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--grey_d);
+    transition: all .3s;
+    margin: 0 5px;
+  }
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--grey_d);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--grey_d);
+    cursor: pointer;
+}
+  
+select.select{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px var(--green);
+    margin-top: 10px;
+    padding-left: 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+}
+select.select > option{
+    width: 100%;
+}
+label.label_select{
+    position: relative;
+}
+label.label_select::before{
+    position: absolute;
+    content: url(..//assets/angle-arrow-down.png);
+    z-index: 5;
+    right: 15px;
+    bottom: 7px;    
+}
+.forms_content label{
+    display: block;
+    position: relative;
+    margin-bottom: 40px;
+}
+.slidecontainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.slidecontainer > span.value{
+    position: absolute;
+    display: block;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    margin: auto;
+}
+.habitaciones > div{
+    display: flex;
+    align-items: center;
+}
+.habitaciones > div > label.label_radio{
+    position: relative;
+    width: 40px;
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.habitaciones > div > label.label_radio > input{
+    visibility: hidden;
+}
+.habitaciones > div > label.label_radio:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    border: solid 1px var(--grey_d);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.habitaciones > div > label.label_radio.active:before{
+    content: url(../assets/checked.png)
+}
+.footer_g{
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+}
+#pop_up_find{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: var(--grey_d);
+    text-align: center;
+    height: 70px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border-bottom: solid 2px var(--green);
+}
+#pop_up_find > p{
+    color: #fff;
+    margin: 0;
+}
+#pop_up_find > h2{
+    color: #fff;
+    margin: 0;
+}
+body.active #pop_up_find{
+    display: flex;
+}
+body.active .forms_content{
+    padding-top: 160px;
+}

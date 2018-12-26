@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vende tu casa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/vende_2.css" />
+</head>
+<body>
+   
+    <header class="control">
+        <a href="vende.html">
+            <img src="assets/go-back-left-arrow.png" alt="atras">
+        </a>
+
+        <p class="clean green">Limpiar</p>
+    </header>
+    <div id="pop_up_find">
+        <p class="regular">Encontramos</p>
+        <h2 class="bold">257 anuncios comparables</h2>
+    </div>
+    <div class="forms_content">
+        <form action="#">
+
+            <label for="tipo_operacion" class="grey_d semi_bold label_select">
+                Tipo de operación
+                <select name="tipo_operacion" id="tipo_operacion" class="select">
+                    <option value="venta">Venta</option>
+                </select>
+            </label>
+
+            <label for="tipo_propiedad" class="grey_d semi_bold label_select">
+                Tipo de propiedad
+                <select name="tipo_propiedad" id="tipo_propiedad" class="select">
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="oficinas">Oficinas</option>
+                    <option value="locales">Locales</option>
+                    <option value="terrenos">Terrenos</option>
+                </select>
+            </label>
+
+            <label for="area" class="grey_d semi_bold">
+                Área total      
+                <div class="slidecontainer">
+                    <p>100m2</p>
+                    <input type="range" min="100" max="400" value="250" class="slider" id="area">   
+                    <p>400m2</p>             
+                    <span class="value" id="area_v"></span>
+                </div>          
+            </label>
+
+            <div class="habitaciones">
+                <p class="grey_d semi_bold">Habitaciones</p>
+                <div>
+                    <label for="hab_1" class="label_radio">
+                        <input type="radio" name="habi" id="hab_1">1
+                    </label>
+                    <label for="hab_2" class="label_radio">
+                        <input type="radio" name="habi" id="hab_2">2
+                    </label>
+                    <label for="hab_3" class="label_radio">
+                        <input type="radio" name="habi" id="hab_3">3
+                    </label>
+                    <label for="hab_4" class="label_radio">
+                        <input type="radio" name="habi" id="hab_4">4
+                    </label>
+                </div>
+            </div>
+            
+            <label for="area" class="grey_d semi_bold">
+                Antigüedad  
+                <div class="slidecontainer">
+                    <p>0&nbsp;años</p>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="antiguedad">   
+                    <p>99&nbsp;años</p>             
+                    <span class="value" id="anti_v"></span>
+                </div>          
+            </label>
+
+        </form>
+    </div>
+    
+    <a href="confirma.html" class="footer_g">
+        <h2 class="grey_d semi_bold">Confirmar características</h2>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
